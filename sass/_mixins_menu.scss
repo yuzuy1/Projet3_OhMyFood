@@ -1,0 +1,896 @@
+@mixin mobile-only {
+    @media all and (max-width: 500px) {
+        @content
+    }
+} 
+
+@mixin tablette-only {
+    @media all and (min-width: 500px) and (max-width: 800px) {
+        @content
+    }
+}
+
+@mixin ordinateur-only {
+    @media all and (min-width: 800px) {
+        @content
+    }
+}
+
+@mixin page_menu {
+    font-size: map-get($taille, page);
+}
+
+@mixin fa_solid_menu {
+    color: $gris;
+    margin: map-get($margeexterne, fa-solid);
+}
+
+@mixin arow_left {
+    margin: map-get($margeexterne, fa_arow_mobile);
+    position: relative;
+    font-size: map-get($taille, fa_arow_mobile);
+    color: $gris_tres_sombre;
+    @include tablette-only {
+        margin: map-get($margeexterne, fa_arow_tablette);
+        font-size: map-get($taille, fa_arow_tablette);
+    }
+
+    @include ordinateur-only {
+        margin: map-get($margeexterne, fa_arow_ordi);
+        font-size: map-get($taille, fa_arow_ordi);
+    }
+}
+
+@mixin body {
+    margin: map-get($margeexterne, body);
+    width: map-get($largeur,body);
+}
+@mixin logo_p{
+    
+    font-size: map-get($taille, logo_p_mobile);
+    margin: auto;
+    position: relative;
+    right: map-get($right, logo_p_tablette);
+    font-family: 'Shrikhand';
+    font-weight: bold;
+    @include tablette-only{
+    font-size: map-get($taille, logo_p_tablette);
+    }
+    @include ordinateur-only{
+        font-size: map-get($taille, logo_p_ordi);
+        }
+}
+
+@mixin haut_page {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin: map-get($margeexterne, haut_page_mobile);
+    height: map-get($hauteur, haut_page_mobile);
+    @include tablette-only {
+        margin: map-get($margeexterne, haut_page_tablette);
+    }
+
+    @include ordinateur-only {
+        margin: map-get($margeexterne, haut_page_ordi);
+        height: map-get($hauteur, haut_page_ordi);
+    }
+}
+
+@mixin logo_menu {
+    height: map-get($hauteur, logo_menu);
+    width: map-get($largeur, logo_menu);
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include ordinateur-only {
+        height: map-get($hauteur, logo_menu_ordi);
+    }
+}
+
+@mixin restaurant_image_menu {
+    bottom: map-get($bottom, restaurant_image);
+    width: map-get($largeur, restaurant_image);
+    position: relative;
+}
+
+@mixin element_menu {
+    background-color: $blanc-sombre;
+    border-radius: map-get($anglebord, element);
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom: map-get($bottom, element);
+}
+
+    @mixin titres_parties {
+        padding: map-get($margeinterne, titres_parties);
+        border-bottom: map-get($bordure_bas, titres_parties);
+        font-family: Arial, Helvetica, sans-serif;
+        height: map-get($hauteur, titres_parties);
+    }
+
+    @mixin h1_menu {
+        margin: map-get($margeexterne, h1_menu_mobile);
+        font-size: map-get($taille, h1_menu);
+        height: map-get($hauteur, h1);
+        padding: map-get($margeinterne, h1_mobile);
+        font-weight: bold;
+        font-family: 'Shrikhand';
+        @include tablette-only{
+        padding: map-get($margeinterne, h1_tablette);
+        margin: map-get($margeexterne, h1_menu_tablette);
+        font-size: map-get($taille, h1_menu_tablette);
+        }
+        @include ordinateur-only {
+            padding: map-get($margeinterne, h1_ordi);
+            font-size: map-get($taille, h1_menu_ordi);
+            margin: map-get($margeexterne, h1_menu_ordi);
+        }
+    }
+
+    @mixin h2_menu {
+        padding: map-get($margeinterne, titres_parties);
+        font-size: map-get($taille, h2_menu_mobile);
+        font-weight: normal;
+        color:$gris_titres;
+        font-family: 'Roboto';
+        @include tablette-only {
+            padding: map-get($margeinterne, titres_parties);
+            font-size: map-get($taille, h2_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            padding: map-get($margeinterne, titres_parties);
+            font-size: map-get($taille, h2_menu_ordi);
+        }
+    }
+
+    @mixin button {
+        background-color: $blanc-sombre;
+        border: none;
+        border-radius: map-get($anglebord, button);
+        padding: map-get($margeinterne, button);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @mixin fa_heart {
+        color: $blanc;
+        padding: map-get($margeinterne, fa_heart);
+        font-size: map-get($taille, fa_heart_mobile);
+
+        @include tablette-only {
+            padding: map-get($margeinterne, fa_heart_tablette);
+            font-size: map-get($taille, fa_heart_tablette);
+        }
+
+        @include ordinateur-only {
+            padding: map-get($margeinterne, fa_heart_ordi);
+            font-size: map-get($taille, fa_heart_ordi);
+        }
+
+        &:hover {
+            color: $violet;
+        }
+    }
+
+    @mixin titres {
+        border-bottom: 5px solid $vert;
+        width: map-get($largeur, titres);
+        left: map-get($left, titres_mobile);
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        @include tablette-only{
+        left: map-get($left, titres_tablette);
+        }
+        @include ordinateur-only{
+        left: map-get($left, titres_ordi);
+        }
+    }
+
+    @mixin description_menu {
+        display: grid;
+        align-items: center;
+        width: map-get($largeur, description);
+}
+    
+
+    @mixin h3_menu {
+        font-size: map-get($taille, h3_menu_mobile);
+        margin: map-get($margeexterne, h3_menu_mobile);
+        width: 76%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*troix points*/
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        @include tablette-only {
+            margin: map-get($margeexterne, h3_menu_tablette);
+            font-size: map-get($taille, h3_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            top: map-get($top, h3_menu);
+            position: relative;
+            font-size: map-get($taille, h3_menu_ordi);
+            margin: map-get($margeexterne, h3_menu_ordi);
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+}
+
+    @mixin h4_menu {
+        font-size: map-get($taille, h4_menu_mobile);
+        margin: map-get($margeexterne, h4_menu_mobile);
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 76%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include tablette-only{
+
+        font-size: map-get($taille, h4_menu_tablette);
+        }
+        @include ordinateur-only {
+            font-size: map-get($taille, h4_menu_ordi);
+            bottom: map-get($bottom, h4_menu);
+            position: relative;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+
+    @mixin h5_menu {
+        font-size: map-get($taille, h5_mobile);
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: end;
+        display: flex;
+        width: map-get($largeur, h5_mobile);
+        font-size: map-get($taille, h5_hover);
+        font-weight: bold;
+        @include tablette-only {
+            font-size: map-get($taille, h5_tablette);
+            width: map-get($largeur, h5_tablette);
+        }
+        @include ordinateur-only {
+            font-size: map-get($taille, h5_ordi);
+            width: map-get($largeur, h5_ordi);
+            font-size: map-get($taille, h5_ordi);
+        }
+    }
+
+    @mixin p_menu {
+        border-radius: map-get($anglebord, p_menu_mobile);
+        font-size: map-get($taille, p_menu_mobile);
+        padding: map-get($margeinterne, p_menu_mobile);
+        width: map-get($largeur, p_menu_mobile);
+        font-weight: bold;
+        background: linear-gradient(to bottom, $pink, $violet);
+        justify-content: center;
+        text-align: center;
+        color: $blanc;
+        box-shadow: map-get($ombre, box-shadow) $gris;
+        font-family: Arial, Helvetica, sans-serif;
+        @include tablette-only {
+            margin: map-get($margeinterne, p_menu_tablette);
+            padding: map-get($margeinterne, p_menu_tablette);
+            width: map-get($largeur, p_menu_tablette);
+        }
+        @include ordinateur-only {
+            margin: map-get($margeexterne, p_ordi);
+            font-size: map-get($taille, p_menu_ordi);
+            padding: map-get($margeinterne, p_menu_ordi);
+            width: map-get($largeur, p_menu_ordi);
+        }
+        &:hover {
+            box-shadow: map-get($ombre, box-shadow-hover) $gris;
+            background: linear-gradient(to bottom, $pink, $violet);
+        }
+
+    }
+
+    @mixin commander_menu {
+        display: flex;
+        justify-content: center;
+        padding: map-get($largeur, commander_menu);
+    }
+    @mixin i_menu {
+        color: $blanc;
+    }
+
+    @mixin partie1 {
+        display: flex;
+    }
+
+    @mixin titre_partie_1 {
+        display: flex;
+        font-family: 'Shrikhand';
+        font-weight: bold;
+        justify-content: space-between;
+        height:map-get($hauteur, titre_partie1_mobile);
+        @include tablette-only{
+            height:map-get($hauteur, titre_partie1_tablette);
+        }
+        @include ordinateur-only{
+            height:map-get($hauteur, titre_partie1_ordi);
+        }
+    }
+    @mixin arow-left{
+        font-size:map-get($taille, titre_partie1_mobile);
+        color:$gris_tres_sombre;
+        position:relative;
+        @include tablette-only{
+        font-size:map-get($taille, titre_partie1_tablette);
+        }
+        @include ordinateur-only{
+            font-size:map-get($taille, titre_partie1_ordi);
+            }
+    }
+    @mixin ul_menu {
+        display: grid;
+        justify-content: space-between;
+        height: map-get($hauteur, ul_mobile);
+        list-style-type: none;
+        padding: map-get($margeinterne, mobile_ul);
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        left: map-get($left, ul_mobile);
+        width: map-get($largeur, ul);
+        margin: map-get($margeexterne, valeurs_ul);
+
+        @include tablette-only {
+            left: map-get($left, ul_tablette);
+            height: map-get($hauteur, ul_tablette);
+            padding: map-get($margeinterne, ul_tablette);
+        }
+
+        @include ordinateur-only {
+            top: map-get($top, ul_ordi);
+            right: map-get($right, ul_ordi);
+            padding: map-get($margeinterne, ul_ordi);
+            font-size: map-get($taille, ul_ordi);
+        }
+
+    }
+
+    @mixin a_menu {
+        text-decoration: none;
+        color: $blanc;
+        font-size: map-get($taille, a_menu_mobile);
+        font-family: Arial, Helvetica, sans-serif;
+
+        @include tablette-only {
+            font-size: map-get($taille, a_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            font-size: map-get($taille, a_menu_ordi);
+        }
+    }
+
+    @mixin fourchette_couteau_menu {
+        color: $blanc;
+        font-size: map-get($taille, fourchette_couteau_mobile);
+        margin: map-get($margeexterne, fourchette_couteau_mobile);
+
+        @include tablette-only {
+            font-size: map-get($taille, fourchette_couteau_tablette);
+        }
+
+        @include ordinateur-only {
+            font-size: map-get($taille, fourchette_couteau_ordi);
+        }
+    }
+
+    @mixin icone_hande_menu {
+        color: $blanc;
+        margin: map-get($margeexterne, fourchette_couteau_mobile);
+
+        @include tablette-only {
+
+            font-size: map-get($taille, icone_hande_tablette);
+        }
+
+        @include ordinateur-only {
+
+            font-size: map-get($taille, icone_hande_ordi);
+        }
+    }
+
+
+
+        .droite_block {
+            display: flex;
+            position: relative;
+            float:right;
+            margin: map-get($margeexterne, droite_block);
+            height: map-get($hauteur, droite_block);
+        }
+
+        .coche {
+            background-color: $vert;
+            position: relative;
+
+        }
+
+        @mixin block_menu {
+            padding: map-get($margeinterne, block);
+            margin: map-get($margeexterne, block);
+            background-color: $blanc;
+            padding: map-get($margeinterne, block);
+            box-shadow: map-get($ombre, block_menu $gris);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: map-get($ombre, block_menu-hover);
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius:map-get($anglebord,block_mobile);
+            height: map-get($hauteur, block_mobile);
+            align-items: center;
+            @include tablette-only {
+                border-radius: map-get($anglebord, block_tablette);
+                height: map-get($hauteur, block_tablette);
+            }
+            @include ordinateur-only {
+                margin: map-get($margeexterne, block_ordi);
+                width: map-get($largeur, block_ordi);
+                height: map-get($hauteur, block_ordi);
+            }
+            &:hover{
+                h3, h4{
+                @include mobile-only{
+                    width: map-get($largeur, block_mobile_h3h4);
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                    @include tablette-only{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: map-get($largeur, block_tablette_h3h4);
+                }
+                    @include ordinateur-only{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: map-get($largeur, block_ordi_h3h4);                
+                }
+                    }}
+
+                &:hover {
+                    .description {
+                    margin: map-get($margeexterne, description_mobile);
+                    @include tablette-only {
+                        .description {
+                        margin: map-get($margeexterne, description_tablette);
+                            }
+                        }
+                    }
+                    @include ordinateur-only {
+                        .description {
+                            margin: map-get($margeexterne, description_ordi);
+                        }
+                    }
+                }
+                &:hover {
+                    .droite_block {
+                        -webkit-animation: slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    }
+                }
+                &:hover {
+                    .fa-sharp {
+                        color: $blanc;
+                        -webkit-animation: spin 0.6s linear 1;
+                        animation: spin 0.6s linear 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: map-get($hauteur, fa_sharp_mobile);
+                        width: map-get($largeur, fa_sharp_mobile);
+                        @include tablette-only {
+                            width: map-get($largeur, fa_sharp_tablette);
+                            font-size: map-get($taille, fa_sharp_tablette);
+                        }
+                        @include ordinateur-only {
+                            width: map-get($largeur, fa_sharp_ordi);
+                            font-size: map-get($taille, fa_sharp_ordi);
+                        }
+                    }
+                }
+            }
+
+
+        @mixin fa_sharp{
+            left: map-get($left, fa_sharp_mobile);
+            @include tablette-only{
+                left: map-get($left, fa_sharp_tablette);
+            }
+            @include ordinateur-only{
+                left: map-get($left, fa_sharp_ordi);
+            }
+        }
+
+
+
+// footer //
+
+@mixin titre_footer {
+
+    left: map-get($left, titre_footer_mobile);
+    font-size: map-get($taille, titre_footer_mobile);
+    width: map-get($largeur, titre_footer_mobile);
+
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-family: 'Shrikhand';
+    
+    @include tablette-only{
+        left: map-get($left, titre_footer_tablette);
+        font-size: map-get($taille, titre_footer_tablette);
+        width: map-get($largeur, titre_footer_tablette);
+    }
+    @include ordinateur-only{
+        left: map-get($left, titre_footer_ordi);
+        font-size: map-get($taille, titre_footer_ordi);
+        width: map-get($largeur, titre_footer_ordi);
+        top: map-get($top, titre_footer_ordi);
+    }
+}
+@mixin valeurs_icone_footer {
+    font-size: map-get($taille, valeur_icone_footer);
+    margin: map-get($margeexterne, valeur_icone_footer_mobile);
+    @include tablette-only{
+        margin: map-get($margeexterne, valeur_icone_footer_tablette);
+        font-size: map-get($taille, valeur_icone_footer_tablette);
+    }
+    @include ordinateur-only{
+        margin: map-get($margeexterne, valeur_icone_footer_ordi);
+        font-size: map-get($taille, valeur_icone_footer_ordi);
+    }
+}
+
+
+@mixin footer {
+    width: map-get($largeur, footer);
+    background-color: $gris_tres_sombre;
+    position: absolute;
+    @include tablette-only{
+        height: map-get($hauteur, footer_tablette);    }
+    @include ordinateur-only {
+
+        position: relative;
+        height: map-get($hauteur, footer_ordi); 
+        font-family: Arial, Helvetica, sans-serif;
+        top: map-get($top, footer_ordi);
+    }
+}
+@mixin fa_heart_hover {
+    content: "\f004";
+    top: map-get($top, fa_heart_hover_mobile);
+    right: map-get($right, fa_heart_hover);
+    font-weight: bold;
+    transition: color 1s ease-out;
+    position: relative;
+    text-shadow: 0 0 3px #000;
+    z-index: 1;
+    font-size: map-get($taille, fa_heart_hover_mobile);
+    @include tablette-only {
+        font-size: map-get($taille, fa_heart_hover_tablette);
+        right: map-get($right, fa_heart_hover_tablette);   
+        top: map-get($top, fa_heart_hover_tablette);
+    }
+    @include ordinateur-only{
+        font-size: map-get($taille, fa_heart_hover_ordi);
+        right: map-get($right, fa_heart_hover_ordi);   
+    }
+    &:hover{
+        color: $violet;
+    }
+}
+// fin footer // 
+
+            body {
+                white-space: nowrap;
+                position: absolute;
+            }
+
+            @media screen and (max-width:500px) {
+                @keyframes sharp-left {
+                    0% {
+                        -webkit-transform: translateX(10px);
+                        transform: translateX(10px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(10px);
+                        transform: translateX(10px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(20px);
+                        transform: translateX(20px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media (min-width:800px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(10px);
+                        transform: translateX(10px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-12px);
+                        transform: translateX(-12px);
+                    }
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-50px);
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+            @media screen and (max-width:500px) {
+                @keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(-30px);
+                        transform: translateX(-30px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media (min-width:800px) {
+                @keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                @-webkit-keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(-10px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left_sharp {
+                    0% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(0px);
+                    }
+
+
+                    100% {
+                        -webkit-transform: translateX(0px);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+
+            #fourchette_couteau {
+                padding: map-get($margeinterne, fourchette);
+            }
+
+            .block_ENTREES {
+                animation: entrees 2s linear;
+                @include tablette-only{
+                    padding: map-get($margeinterne, block_entree_mobile);
+                }
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: map-get($margeinterne, block_entree_ordi);
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+
+            }
+
+            .block_PLATS {
+                animation: entrees 4s linear;
+                @include tablette-only{
+                    padding: map-get($margeinterne, block_plat_mobile);
+                }
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: map-get($margeinterne, block_plat_ordi);
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                33% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+
+            }
+
+            .block_DESSERTS {
+                animation: entrees 6s linear;
+                @include tablette-only{
+                    padding: map-get($margeinterne, block_desserts_mobile);
+                }
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: map-get($margeinterne, block_desserts_ordi);
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                66% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+            @-moz-keyframes spin {
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes spin {
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spin {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }

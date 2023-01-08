@@ -1,0 +1,104 @@
+
+.page{
+    @include page_menu;
+}
+body{
+    @include body;
+}
+/* haut de page*/
+.fa-sharp{
+    @include fa_sharp;
+}
+.fa-regular {
+    @include fa_heart_hover;
+}
+.fa-solid{
+    @include fa_solid_menu;
+}
+.fa-arrow-left{
+    @include arow-left;
+}
+.logo{
+    @include logo_menu;
+} 
+.logo >p{
+    @include logo_p;
+}
+#restaurant_image{
+    @include restaurant_image_menu;
+}
+.élement{
+    @include element_menu;
+}
+
+h1{
+    @include h1_menu;
+}
+h2{
+    @include h2_menu;
+}
+
+.block{
+    @include block_menu;
+}
+.description{
+    @include description_menu;
+}
+
+h3{
+    @include h3_menu;
+}
+h4{
+    @include h4_menu;
+}
+h5{
+    @include h5_menu;
+}
+.Commander > p{
+    @include p_menu;
+}
+.Commander{
+    @include commander_menu;
+}
+.haut_page{
+    @include haut_page;
+}
+i{
+    @include i_menu;
+}
+
+
+.titre_partie1{
+    @include titre_partie_1;
+}
+.titres_parties{
+    @include titres;
+}
+ul{  
+    @include ul_menu;
+}
+
+li a{
+    @include a_menu;
+}
+
+.fa-heart{
+    @include fa_heart;
+}
+button{
+    @include button;
+}
+
+footer {
+    @include footer;
+}
+.titre_footer{
+    @include titre_footer;
+}
+
+#fourchette_couteau{
+    @include valeurs_icone_footer ;
+}
+#icone_hande{
+    @include valeurs_icone_footer ;
+}

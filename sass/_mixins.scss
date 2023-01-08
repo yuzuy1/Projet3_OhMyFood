@@ -1,0 +1,868 @@
+
+@mixin mobile-only {
+    @media all and (max-width: 500px){ 
+        @content
+    }
+}
+@mixin tablette-only {
+    @media all and (min-width: 500px) and (max-width: 800px){ 
+        @content
+    }
+}
+@mixin ordinateur-only {
+    @media all and (min-width: 800px){ 
+        @content
+    }
+}
+
+@mixin haut_page{
+    background-color:$white;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    height: map-get($hauteur, haut_page_mobile);
+
+    @include tablette-only{
+        height: map-get($hauteur, haut_page_tablette);
+
+    }
+    @include ordinateur-only{
+        height: map-get($hauteur, haut_page_ordi);
+
+    }
+}
+
+
+@mixin html
+    {    width: map-get($largeur, html);};
+
+    //footer //
+
+@mixin valeurs_icone_footer {
+    font-size: map-get($taille, valeur_icone_footer);
+    margin: map-get($MargeExterne, valeur_icone_footer_mobile);
+    @include tablette-only{
+        margin: map-get($MargeExterne, valeur_icone_footer_tablette);
+        font-size: map-get($taille, valeur_icone_footer_tablette);
+    }
+    @include ordinateur-only{
+        margin: map-get($MargeExterne, valeur_icone_footer_ordi);
+        font-size: map-get($taille, valeur_icone_footer_ordi);
+    }
+}
+@mixin titre_footer {
+    position: relative;
+    margin:map-get($MargeExterne, titre_footer_mobile);
+    
+    @include tablette-only{
+        position: relative;
+        margin:map-get($MargeExterne, titre_footer_tablette);
+    }
+    @include ordinateur-only{
+        position: relative;
+        padding: map-get($margeinterne, titre_footer_ordi);
+        margin:map-get($MargeExterne, titre_footer_ordi);
+    }
+    }
+@mixin ohmyfood_h1{
+    width:map-get($largeur, ohmyfood_p_mobile);
+    top:map-get($top, ohmyfood_p_mobile);
+    height:map-get($hauteur, ohmyfood_p_mobile);
+    font-size:map-get($taille, ohmyfood_p_mobile);
+    margin: auto;
+    position: relative;
+
+    @include tablette-only{
+        width:map-get($largeur, ohmyfood_p_tablette);
+        height:map-get($hauteur, ohmyfood_p_tablette);
+        font-size:map-get($taille, ohmyfood_p_tablette);
+    }
+    @include ordinateur-only{
+        width:map-get($largeur, ohmyfood_p_ordi);
+        font-size:map-get($taille, ohmyfood_p_ordi);
+    }
+    
+}
+@mixin titre_footer_p {
+    left:map-get($left, titre_footer_p_mobile);
+    font-size:map-get($taille, titre_footer_p_mobile);
+    top:map-get($top, titre_footer_p_mobile);
+    color:$white;
+    font-weight: bold;
+    font-family: 'Shrikhand';
+    font-weight: bold;
+    @include tablette-only{
+        left:map-get($left, titre_footer_p_tablette);
+        font-size:map-get($taille, titre_footer_p_tablette);
+    }
+    @include ordinateur-only{
+        left:map-get($left, titre_footer_p_ordi);
+        font-size:map-get($taille, titre_footer_p_ordi);
+    }
+}
+@mixin titre_footer_img {
+    padding: map-get($margeinterne, titre_footer_mobile_img);
+
+    color:$white;
+    height:map-get($hauteur, titre_footer_mobile_img);
+    width:map-get($largeur, titre_footer_img);
+    filter: invert(1);
+    margin: map-get($MargeExterne, titre_footer_mobile_img);
+    border-radius: $no-radius;
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        padding: map-get($margeinterne, titre_footer_tablette_img);
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: map-get($MargeExterne, titre_footer_tablette);
+        filter: invert(1); 
+        height: map-get($hauteur, titre_footer_tablette);
+        border: map-get($bordure, titre_footer_tablette);
+        padding: map-get($margeinterne, titre_footer_tablette);
+        width:map-get($largeur, titre_footer_tablette);
+        top: map-get($top, footer_ordi);
+
+    }    
+    @include ordinateur-only {
+    height:map-get($hauteur, titre_footer_ordi_img);
+    width:map-get($largeur, titre_footer_ordi_img);
+    position: relative; 
+    font-family: Arial, Helvetica, sans-serif;
+    top: map-get($top, footer_ordi);
+    padding: map-get($margeinterne, titre_footer_ordi_img);
+    }
+}
+@mixin footer {
+    width: map-get($largeur, footer);
+    background-color: $gris_tres_sombre;
+    position:absolute;
+    @include tablette-only{
+        height: map-get($hauteur, footer_tablette);    }
+    @include ordinateur-only {
+        height: map-get($hauteur, footer_ordi); 
+        font-family: Arial, Helvetica, sans-serif;
+        top: map-get($top, footer_ordi);
+        position: relative;
+    }
+}
+
+// fin footer //
+
+@mixin valeurs_ul {
+    display: grid;
+    justify-content: space-between;
+    height: map-get($hauteur, ul_mobile);
+    list-style-type: none;
+    top: map-get($top, ul);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: map-get($MargeExterne, valeurs_ul);
+    padding: map-get($margeinterne, mobile_ul);
+    @include tablette-only{
+        position: relative;
+        top: map-get($top, ul_tablette);
+        height: map-get($hauteur, ul_tablette);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: map-get($margeinterne, valeur_tablette_ul);
+    }
+    @include ordinateur-only{
+        height: map-get($hauteur, ul_ordi);
+        position: relative;
+        display: grid;
+        justify-content: space-between;
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif;
+        top: map-get($top, valeur_ordi_ul);
+        padding: map-get($margeinterne, valeur_ordi_ul);
+        font-size: map-get($taille, ul_ordi);
+}}
+@mixin valeurs_li_a {
+    text-decoration: none;
+    color: white;
+    font-size:map-get($taille, valeur_li_a);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        font-size:map-get($taille, valeur_li_a_tablette);
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, valeur_li_a_ordi);
+    }
+
+}
+    
+@mixin i {
+    color: $white;
+}
+@mixin texte{
+    font-weight: bold;
+    position: relative;
+    bottom: map-get($bottom, texte_mobile);
+    text-align: initial;
+    font-size: map-get($taille, texte);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only {
+        bottom: map-get($bottom, texte_tablette);
+    }
+}
+
+@mixin description {
+    width:map-get($largeur, description);
+    box-shadow: map-get($ombre, description);
+    margin: map-get($MargeExterne, description);
+    border-radius: map-get($bordure, bordure_mobile);
+    background-color: white;
+    text-align: end;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+
+
+    &:hover{
+        box-shadow: map-get($ombre, description);
+        box-shadow: map-get($ombre, description-hover);
+    }
+}
+
+@mixin img {
+    position: relative;
+    width: map-get($largeur,img);
+    border-radius:map-get($bordure, img);
+}
+
+@mixin ohmyfood_p{
+
+    top:map-get($top, ohmyfood_p_mobile);
+    margin:map-get($MargeExterne, ohmyfood_p_mobile);
+    font-size:map-get($taille, ohmyfood_p_mobile);
+    width: fit-content;
+    margin:auto;
+    @include tablette-only{
+    font-size:map-get($taille, ohmyfood_p_tablette);
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, ohmyfood_p_ordi);
+        }
+}
+@mixin p {
+    position: relative;
+    left: map-get($left, p); 
+    text-align: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:map-get($MargeExterne, p);
+    font-size: 1rem;
+    position: relative;
+    bottom: map-get($bottom, p);
+    width: map-get($largeur, p);
+    @include tablette-only {
+    font-size: map-get($taille, p_tablette);
+    margin: map-get($MargeExterne, p_tablette);
+    }
+    @include ordinateur-only{
+        font-size: map-get($taille, p_ordi);
+    }
+}
+@mixin fa_heart_hover {
+    content: "\f004";
+    top: map-get($top, fa_heart_hover_mobile);
+    right: map-get($right, fa_heart_hover);
+    font-weight: bold;
+    transition: color 1s ease-out;
+    position: relative;
+    text-shadow: 0 0 3px #000;
+    z-index: 1;
+    font-size: map-get($taille, fa_heart_hover_mobile);
+    @include tablette-only {
+        font-size: map-get($taille, fa_heart_hover_tablette);
+        right: map-get($right, fa_heart_hover_tablette);   
+        top: map-get($top, fa_heart_hover_tablette);
+    }
+    @include ordinateur-only{
+        font-size: map-get($taille, fa_heart_hover_ordi);
+        right: map-get($right, fa_heart_hover_ordi);   
+    }
+    &:hover{
+        color: $violet;
+    }
+}
+@mixin nouveau1 {
+    font-size: map-get($taille, nouveau);
+    background-color: $vertclaire;
+    position: absolute;
+    color: $vert;
+    margin: map-get($MargeExterne, nouveau);
+    font-family: Arial, Helvetica, sans-serif;
+    width: map-get($largeur, nouveau1_mobile);
+    float: right;
+    height: map-get($hauteur, nouveau1_mobile);
+    right: map-get($right, nouveau1_mobile);
+    position: absolute;
+    z-index: 1;
+    padding: map-get($margeinterne,nouveau1_mobile);
+    
+    @include tablette-only{
+        width: map-get($largeur, nouveau1_tablette);
+        right: map-get($right, nouveau1_tablette);
+        font-size: map-get($taille, nouveau1_tablette);
+        background-color: $vertclaire;
+        position: absolute;
+        color: $vert;
+        margin: map-get($MargeExterne, nouveau1_tablette);
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        height: map-get($hauteur, nouveau1_tablette);
+        top: map-get($top, nouveau1_tablette);
+    }
+    @include ordinateur-only{
+        top: map-get($top, nouveau1_ordi);
+        width: map-get($largeur, nouveau1_ordi);
+        right: map-get($right, nouveau1_ordi);
+        font-size: map-get($taille, nouveau);
+        background-color: $vertclaire;
+        position: relative;
+        color: $vert;
+        margin: map-get($MargeExterne, nouveau);
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        height: map-get($hauteur, nouveau1_ordi);
+        
+    }
+}
+
+@mixin nouveau2 {
+    font-size: map-get($taille, nouveau);
+    background-color: $vertclaire;
+    position: relative;
+    color: $vert;
+    margin: map-get($MargeExterne, nouveau);
+    font-family: Arial, Helvetica, sans-serif;
+    width: map-get($largeur, nouveau2_mobile);
+    float: right;
+    height:  map-get($hauteur, nouveau2_mobile);
+    right:  map-get($right, nouveau2_mobile);
+    position: absolute;
+    z-index: 1;
+    padding: map-get($margeinterne,nouveau1_mobile);
+    @include tablette-only{
+        width:  map-get($largeur, nouveau2_tablette);
+        right:  map-get($right, nouveau2_tablette);
+        font-size:  map-get($taille, nouveau2_tablette);
+        background-color: $vertclaire;
+        color:$vert;
+        position: absolute;
+        margin:  map-get($MargeExterne, nouveau2_tablette);
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        height:  map-get($hauteur, nouveau2_tablette);}
+    @include ordinateur-only{
+        width:  map-get($largeur, nouveau2_ordi);
+        right: 1rem;
+        font-size: map-get($taille, nouveau);
+        background-color: $vertclaire;
+        position: relative;
+        color: $vert;
+        margin: map-get($MargeExterne, nouveau);
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        height:  map-get($hauteur, nouveau2_ordi);
+        bottom: map-get($bottom, nouveau2_ordi);
+    }
+}
+
+@mixin h6 {
+    font-size:  map-get($taille, h6_mobile);
+    margin:  map-get($MargeExterne, h6);
+    background-color: $gris;
+    padding: map-get($margeinterne, h6_mobile);
+    font-family: 'Roboto';
+    @include tablette-only{
+        font-size:  map-get($taille, h6_tablette);
+        padding: map-get($margeinterne, h6_tablette);
+    }
+    @include ordinateur-only{
+        font-size:  map-get($taille, h6_ordi);
+        padding: map-get($margeinterne, h6_ordi);
+    }
+}
+
+@mixin restaurants {
+    background-color: $gris;
+    padding: map-get($margeinterne, restaurants_mobile);
+    margin: map-get($MargeExterne, restaurant);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+    padding: map-get($margeinterne, restaurants_tablette);
+    }
+    @include ordinateur-only {
+        background-color: $gris;
+        column-count: 2;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:map-get($margeinterne, restaurants_ordi);
+    }
+}
+
+@mixin nouveau1_p{
+    left: map-get($left, nouveau1_p);
+    bottom: map-get($bottom, nouveau1_p);
+    position: relative;
+    margin: map-get($MargeExterne, nouveau1_p);
+    font-weight: bold;
+    @include tablette-only{
+    left: map-get($left, nouveau1_p_tablette);
+    margin: map-get($MargeExterne, nouveau1_p_tablette);
+    }
+}
+@mixin nouveau2_p{
+    left: map-get($left, nouveau2_p);
+    bottom: map-get($bottom, nouveau2_p);
+    position: relative;
+    margin: map-get($MargeExterne, nouveau2_p);
+    font-weight: bold;
+    @include tablette-only{
+    left: map-get($left, nouveau2_p_tablette);
+    margin: map-get($MargeExterne, nouveau2_p_tablette);
+    }
+}
+@mixin partie1{
+    position: relative;
+    top: map-get($top, partie1_mobile);
+    
+    @include tablette-only{
+        top: map-get($top, partie1_tablette);
+    }
+    @include ordinateur-only(){
+        top: map-get($top, partie1_ordi);
+    }
+}
+@mixin partie2{
+    position: relative;
+    top: map-get($top, partie2_mobile);
+    @include mobile-only{
+        top: map-get($top, partie2_tablette);
+    }
+    @include ordinateur-only{
+        top: map-get($top, partie2_ordi);
+    }
+}
+@mixin partie3{
+    position: relative;
+    top: map-get($top, partie3_mobile);
+    
+    @include tablette-only{
+        top: map-get($top, partie3_tablette);
+    }
+    @include ordinateur-only(){
+        top: map-get($top, partie3_ordi);
+    }
+}
+@mixin partie4{
+    position: relative;
+    top: map-get($top, partie4_mobile);
+    @include mobile-only{
+        top: map-get($top, partie4_tablette);
+    }
+    @include ordinateur-only{
+        top: map-get($top, partie4_ordi);
+    }
+}
+@mixin images_icones {
+    font-size: map-get($taille, images_icones);
+    color: gray;
+    margin:  map-get($MargeExterne, images_icones);
+    align-items: center;
+    display: flex;
+    @include tablette-only{
+        font-size: map-get($taille, images_icones_tablette);
+        margin:  map-get($MargeExterne, images_icones_tablette);
+    }
+    @include ordinateur-only(){
+        font-size: map-get($taille, images_icones_ordi);
+        margin:  map-get($MargeExterne, images_icones_ordi);
+    }
+}
+@mixin images_icones_hover {
+    color: $bleu-violet;
+}
+
+@mixin chiffre {
+    background-color: $bleu-violet;
+    border-radius: $radius;
+    position: relative;
+    padding:  map-get($margeinterne, chiffre_mobile);
+    margin: map-get($MargeExterne, chiffre_mobile);
+    color: $white;
+    right: map-get($right, chiffre_mobile);
+    font-size: map-get($taille, mobile_ordi);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        padding:  map-get($margeinterne, chiffre_tablette);
+        margin: map-get($MargeExterne, chiffre_tablette);
+        right: map-get($right, chiffre_tablette);
+    }
+    @include ordinateur-only{
+        padding:  map-get($margeinterne, chiffre_ordi);
+        margin: map-get($MargeExterne, chiffre_ordi);
+        right: map-get($right, chiffre_ordi);
+        font-size: map-get($taille, chiffre_ordi);
+    }
+}
+
+@mixin partie_fonctionnement_hover {
+    box-shadow: map-get($ombre, partie_fonctionnement_hover);
+    background-color: map-get($fond-color, partie_fonctionnement);
+    &:hover{
+        #image_phone, #image_liste, #image_restaurant{
+            color:$bleu-violet;
+ 
+}
+}
+
+}
+@mixin image_menu{
+    overflow: hidden;
+    height: map-get($hauteur, image_menu_mobile);
+    bottom: map-get($hauteur, image_menu);
+    position: relative;
+    @include mobile-only {
+        height: map-get($hauteur, image_menu_tablette);
+    }
+    @include ordinateur-only{
+        height: map-get($hauteur, image_menu_ordi);
+    }
+
+}
+@mixin partie_fonctionnement {
+    height:  map-get($hauteur, partie_fonctionnement);
+    margin:  map-get($MargeExterne, partie_fonctionnement);
+    font-size:  map-get($taille, partie_fonctionnement);
+    background-color: map-get($fond-color, partie_fonctionnement);
+    border-radius: $radius;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+    height:  map-get($hauteur, partie_fonctionnement_tablette);
+    font-size:  map-get($taille, partie_fonctionnement_tablette);
+    }
+    @include ordinateur-only{
+    height:  map-get($hauteur, partie_fonctionnement_ordi);
+    font-size:  map-get($taille, partie_fonctionnement_ordi);
+    
+    }
+}
+
+@mixin les_parties {
+    text-decoration: none;
+    color: $black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin h5 {
+    font-size:  map-get($taille, h5_mobile);
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 100%;
+    @include tablette-only{
+        font-size:  map-get($taille, h5_tablette);
+}   
+    @include ordinateur-only{
+        font-size:  map-get($taille, h5_ordi);
+    }
+}
+
+
+@mixin h4 {
+    font-size:map-get($taille, h4_mobile);
+    font-family: 'Roboto';
+    position: relative;
+    right:map-get($right, h4);
+    @include tablette-only{
+        font-size:map-get($taille, h4_tablette);
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, h4_ordi);
+    }
+}
+
+@mixin fonctionnement {
+    text-decoration: none;
+    color: $black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+@mixin h3 {
+
+    text-transform: none;
+    font-size: map-get($taille, h3_mobile);
+    color: $white;
+    font-family: map-get($police, h3);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        font-size:map-get($taille, h3_tablette);
+
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, h3_ordi);
+    }
+
+}
+    
+@mixin bouton_recherche{
+    background: linear-gradient(to bottom, $pink, $violet);
+    text-align: center;
+    box-shadow: 1px 5px 11px 1px #767676;
+    border-radius: $radius;
+    margin: map-get($MargeExterne, bouton_recherche);
+    padding: map-get($margeinterne, bouton_recherche);
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        width: map-get($largeur, bouton_recherche_tablette);
+        margin: auto;
+    }
+    @include ordinateur-only(){
+        width: map-get($largeur, bouton_recherche_ordi);
+        margin: auto;
+    }
+    }
+
+@mixin bouton_recherche_hover {
+    filter: brightness(1.10);
+    box-shadow: map-get($ombre, bouton_recherche_hover);
+}
+@mixin fonctionnement {
+    box-shadow: map-get($ombre, fonctionnement);
+    margin:  map-get($MargeExterne, fonctionnement);
+    padding: map-get($margeinterne, fonctionnement);
+    @include tablette-only{
+        margin:  map-get($MargeExterne, fonctionnement_tablette);
+    }
+    @include ordinateur-only{
+        margin:  map-get($MargeExterne, fonctionnement_ordi);
+    }
+}
+@mixin h2 {
+    margin: map-get($MargeExterne, h2);
+    text-align: center;
+    font-size: map-get($taille, h2_mobile);
+    font-family: map-get($police, h2);
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+        font-size: map-get($taille, h2_tablette);
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, h2_ordi);
+    }
+}
+
+@mixin texte_recherche2 {
+    margin: map-get($MargeExterne,texte_recherche2);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablette-only{
+    margin: map-get($MargeExterne,texte_recherche2_tablette);
+    }
+    @include ordinateur-only{
+        margin: map-get($MargeExterne,texte_recherche2_ordi);
+        }
+}
+
+@mixin h1 {
+    font-size: map-get($taille, h1_mobile);
+    text-align: center;
+    font-family: map-get($police, h1);
+    font-weight: bold;
+    @include tablette-only{
+        font-size: map-get($taille, h2_tablette);
+    }
+    @include ordinateur-only{
+        font-size:map-get($taille, h2_ordi);
+    }
+}
+
+@mixin texte_recherche1 {
+    width: map-get($largeur, texte-recherche1);
+    margin: map-get($MargeExterne, texte-recherche1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+@mixin form{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+@mixin destination {
+    border: map-get($bordure, destination);
+    justify-content: center;
+    background-color: $gris_sombre;
+    font-size: map-get($taille, destination);
+    border-style: none;
+    border:none;
+    margin: map-get($MargeExterne, destination);
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    @include tablette-only(){
+    font-size: map-get($taille, destination_tablette);
+    
+}
+    @include ordinateur-only{
+    font-size: map-get($taille, destination_ordi);
+    }
+}
+
+@mixin image_recherche {
+    font-size: map-get($taille, image_recherche);
+    color: $black;
+    left: map-get($left, image_recherche);
+
+    position: relative;
+    @include tablette-only{
+    font-size: map-get($taille, image_recherche_tablette);
+    left: map-get($left, image_recherche_tablette);
+
+    position: relative;
+}
+    @include ordinateur-only{
+    font-size: map-get($taille, image_recherche_ordi);
+    left: map-get($left, image_recherche_ordi);
+    
+    }
+}
+
+@mixin barre_de_recherche {
+    border-top: 3px solid rgba(211, 211, 211, 0.53);
+    background-color: $gris_sombre;
+    margin: map-get($MargeExterne, barre_de_recherche);
+    flex-direction: column;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: map-get($hauteur, barre_de_recherche_mobile);
+    @include tablette-only{
+        margin: map-get($MargeExterne, barre_de_recherche_tablette);
+        height: map-get($hauteur, barre_de_recherche_tablette);
+    }
+    @include ordinateur-only{
+        margin: map-get($MargeExterne, barre_de_recherche_ordi);
+        height: map-get($hauteur, barre_de_recherche_ordi);
+    }
+}
+
+
+@mixin logo {
+    height: map-get($hauteur, logo);
+    width: map-get($largeur, logo);
+    border-radius: map-get($bordure, logo);
+    margin: map-get($MargeExterne,logo);
+}
+
+@mixin header {
+    background: $gris;
+    padding: map-get($margeinterne,header);
+    @include tablette-only{
+        height: map-get($hauteur, header_tablette);
+}    @include ordinateur-only{
+    height: map-get($hauteur, header_ordi);
+}
+
+}
+
+@mixin page {
+    width: map-get($largeur, page);
+    position: absolute;
+}
+@mixin body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin:map-get($MargeExterne, body);
+    width: map-get($largeur, body);
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+     }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+     }
+    100% {
+        opacity: 1;
+     }
+
+}
+
+    .lds-dual-ring {
+        width: map-get($largeur, lds-dual-ring);
+        height: map-get($hauteur, lds-dual-ring_mobile);
+        display: inline-block;
+        position: absolute;
+        pointer-events: none;
+        margin:auto;
+        @include tablette-only{
+        height: map-get($hauteur, lds-dual-ring_tablette);
+        }
+        @include ordinateur-only{
+            height: map-get($hauteur, lds-dual-ring_ordi);
+            }
+        
+      }
+
+
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: map-get($largeur, lds-dual-ring_mobile);
+        height: map-get($hauteur, lds-dual-ring_mobile);
+        margin: auto;
+        border-radius: map-get($bordure, lds-dual-ring-after);
+        border: 12px solid #fff;
+        border-color: $violet transparent $violet transparent;
+        -webkit-animation: lds-dual-ring 3s linear 1;
+        animation: lds-dual-ring 3s linear 1;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top:map-get($top, lds-dual-ring-after);
+        opacity: 0;
+        @include tablette-only{
+            width: map-get($largeur, lds-dual-ring_tablette);
+            height: map-get($hauteur, lds-dual-ring_tablette);
+            }
+            @include ordinateur-only{
+                width: map-get($largeur, lds-dual-ring_ordi);
+                height: map-get($hauteur, lds-dual-ring_ordi);
+                }
+            
+          
+      }
+
+
+
+      @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        50% {
+            transform: rotate(180deg);
+            opacity: 1;
+        }
+        100% {
+          transform: rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+
+
+@mixin a {
+    text-decoration: none;
+    color: black;}
