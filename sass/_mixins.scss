@@ -691,12 +691,10 @@
     justify-content: center;
 }
 @mixin destination {
-    border: map-get($bordure, destination);
     justify-content: center;
     background-color: $gris_sombre;
     font-size: map-get($taille, destination);
     border-style: none;
-    border:none;
     margin: map-get($MargeExterne, destination);
     display: flex;
     text-align: center;
