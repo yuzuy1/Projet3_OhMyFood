@@ -694,7 +694,6 @@
     justify-content: center;
     background-color: $gris_sombre;
     font-size: map-get($taille, destination);
-    border-style: none;
     margin: map-get($MargeExterne, destination);
     display: flex;
     text-align: center;
