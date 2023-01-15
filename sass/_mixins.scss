@@ -508,9 +508,11 @@
 @mixin partie_fonctionnement_hover {
     box-shadow: map-get($ombre, partie_fonctionnement_hover);
     background-color: map-get($fond-color, partie_fonctionnement);
+    filter: brightness(1.05);
     &:hover{
         #image_phone, #image_liste, #image_restaurant{
             color:$bleu-violet;
+            
  
 }
 }
@@ -610,11 +612,11 @@
 @mixin bouton_recherche{
     background: linear-gradient(to bottom, $pink, $violet);
     text-align: center;
-    box-shadow: 1px 5px 11px 1px #767676;
-    border-radius: $radius;
     margin: map-get($MargeExterne, bouton_recherche);
     padding: map-get($margeinterne, bouton_recherche);
     font-family: Arial, Helvetica, sans-serif;
+
+    border-radius: $radius;
     @include tablette-only{
         width: map-get($largeur, bouton_recherche_tablette);
         margin: auto;
@@ -626,8 +628,10 @@
     }
 
 @mixin bouton_recherche_hover {
-    filter: brightness(1.10);
     box-shadow: map-get($ombre, bouton_recherche_hover);
+    filter: brightness(96%);
+    box-shadow: 1px 5px 11px 1px #767676;
+    border-radius: $radius;
 }
 @mixin fonctionnement {
     box-shadow: map-get($ombre, fonctionnement);
@@ -698,6 +702,7 @@
     display: flex;
     text-align: center;
     font-weight: bold;
+    border: none;
     @include tablette-only(){
     font-size: map-get($taille, destination_tablette);
     
