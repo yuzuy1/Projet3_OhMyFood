@@ -257,11 +257,10 @@ header {
   justify-content: center;
   background-color: rgb(234, 234, 234);
   font-size: 1rem;
-  border-style: none;
-  border: none;
   display: flex;
   text-align: center;
   font-weight: bold;
+  border: none;
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   #destination {
@@ -347,11 +346,10 @@ h2 {
 .bouton_recherche {
   background: linear-gradient(to bottom, rgb(223, 118, 200), rgb(159, 91, 221));
   text-align: center;
-  box-shadow: 1px 5px 11px 1px #767676;
-  border-radius: 45px 45px 45px 45px;
   margin: 30px 19% 70px 19%;
   padding: 1px;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 45px 45px 45px 45px;
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .bouton_recherche {
@@ -367,8 +365,10 @@ h2 {
 }
 
 .bouton_recherche:hover {
-  filter: brightness(1.1);
   box-shadow: 2px 5px 5px #d7d7d7;
+  filter: brightness(96%);
+  box-shadow: 1px 5px 11px 1px #767676;
+  border-radius: 45px 45px 45px 45px;
 }
 
 h3 {
@@ -498,6 +498,7 @@ h5 {
 .partie3_fonctionnement:hover {
   box-shadow: 2px 5px 5px #d7d7d7;
   background-color: rgb(247, 247, 247);
+  filter: brightness(1.05);
 }
 .partie1_fonctionnement:hover:hover #image_phone, .partie1_fonctionnement:hover:hover #image_liste, .partie1_fonctionnement:hover:hover #image_restaurant,
 .partie2_fonctionnement:hover:hover #image_phone,
