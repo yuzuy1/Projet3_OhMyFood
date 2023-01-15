@@ -677,6 +677,7 @@ footer {
 @media all and (min-width: 800px) {
   #fourchette_couteau {
     font-size: 2rem;
+    color: white;
   }
 }
 
