@@ -278,16 +278,21 @@
         color: $blanc;
         box-shadow: map-get($ombre, box-shadow) $gris;
         font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 6rem;
         @include tablette-only {
-            margin: map-get($margeinterne, p_menu_tablette);
+            padding: map-get($margeinterne, p_menu_tablette);
             padding: map-get($margeinterne, p_menu_tablette);
             width: map-get($largeur, p_menu_tablette);
+
+            margin-bottom: 6rem;
         }
         @include ordinateur-only {
             margin: map-get($margeexterne, p_ordi);
             font-size: map-get($taille, p_menu_ordi);
             padding: map-get($margeinterne, p_menu_ordi);
             width: map-get($largeur, p_menu_ordi);
+
+            margin-bottom: 4rem;
         }
         &:hover {
             box-shadow: map-get($ombre, box-shadow-hover) $gris;
