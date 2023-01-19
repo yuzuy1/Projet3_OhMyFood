@@ -278,7 +278,11 @@
         color: $blanc;
         box-shadow: map-get($ombre, box-shadow) $gris;
         font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
+
+        filter: brightness(96%);
+        box-shadow: map-get($ombre, box-shadow-hover) $gris;
+
         @include tablette-only {
             padding: map-get($margeinterne, p_menu_tablette);
             padding: map-get($margeinterne, p_menu_tablette);
@@ -295,10 +299,9 @@
             margin-bottom: 4rem;
         }
         &:hover {
-            box-shadow: map-get($ombre, box-shadow-hover) $gris;
             background: linear-gradient(to bottom, $pink, $violet);
-
-            filter: brightness(96%);
+            box-shadow: none;
+            filter: brightness(100%);
         }
 
     }
