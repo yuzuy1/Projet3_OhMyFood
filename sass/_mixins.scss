@@ -35,19 +35,35 @@
 
 @mixin html
     {    width: map-get($largeur, html);};
-
     //footer //
-
 @mixin valeurs_icone_footer {
     font-size: map-get($taille, valeur_icone_footer);
     margin: map-get($MargeExterne, valeur_icone_footer_mobile);
+    margin-right: 1.2rem;
     @include tablette-only{
         margin: map-get($MargeExterne, valeur_icone_footer_tablette);
         font-size: map-get($taille, valeur_icone_footer_tablette);
+        margin-right: 2rem;
     }
     @include ordinateur-only{
         margin: map-get($MargeExterne, valeur_icone_footer_ordi);
         font-size: map-get($taille, valeur_icone_footer_ordi);
+        margin-right: 2rem;
+    }
+}
+@mixin valeurs_icone_footer_hand {
+    font-size: map-get($taille, valeur_icone_footer);
+    margin: map-get($MargeExterne, valeur_icone_footer_mobile);
+    margin-right: 0.8rem;
+    @include tablette-only{
+        margin: map-get($MargeExterne, valeur_icone_footer_tablette);
+        font-size: map-get($taille, valeur_icone_footer_tablette);
+        margin-right: 1.4rem;   
+    }
+    @include ordinateur-only{
+        margin: map-get($MargeExterne, valeur_icone_footer_ordi);
+        font-size: map-get($taille, valeur_icone_footer_ordi);
+        margin-right: 1.4rem;   
     }
 }
 @mixin titre_footer {
@@ -71,7 +87,7 @@
     font-size:map-get($taille, ohmyfood_p_mobile);
     margin: auto;
     position: relative;
-
+    font-style: italic;
     @include tablette-only{
         width:map-get($largeur, ohmyfood_p_tablette);
         height:map-get($hauteur, ohmyfood_p_tablette);
@@ -83,6 +99,9 @@
     }
     
 }
+@mixin destination {
+    color:black;
+}
 @mixin titre_footer_p {
     left:map-get($left, titre_footer_p_mobile);
     font-size:map-get($taille, titre_footer_p_mobile);
@@ -91,6 +110,7 @@
     font-weight: bold;
     font-family: 'Shrikhand';
     font-weight: bold;
+    font-style: italic;
     @include tablette-only{
         left:map-get($left, titre_footer_p_tablette);
         font-size:map-get($taille, titre_footer_p_tablette);
@@ -279,7 +299,10 @@
         right: map-get($right, fa_heart_hover_ordi);   
     }
     &:hover{
-        color: $violet;
+        background: linear-gradient(to bottom, $violet, $pink);
+        text-shadow: none;
+        background-clip: text;
+        color:transparent;
     }
 }
 @mixin nouveau1 {
@@ -322,10 +345,8 @@
         font-family: Arial, Helvetica, sans-serif;
         float: right;
         height: map-get($hauteur, nouveau1_ordi);
-        
     }
 }
-
 @mixin nouveau2 {
     font-size: map-get($taille, nouveau);
     background-color: $vertclaire;
@@ -481,7 +502,6 @@
 @mixin images_icones_hover {
     color: $bleu-violet;
 }
-
 @mixin chiffre {
     background-color: $bleu-violet;
     border-radius: $radius;
@@ -584,16 +604,12 @@
         font-size:map-get($taille, h4_ordi);
     }
 }
-
 @mixin fonctionnement {
     text-decoration: none;
     color: $black;
     font-family: Arial, Helvetica, sans-serif;
-
 }
-
 @mixin h3 {
-
     text-transform: none;
     font-size: map-get($taille, h3_mobile);
     color: $white;
@@ -601,14 +617,11 @@
     font-family: Arial, Helvetica, sans-serif;
     @include tablette-only{
         font-size:map-get($taille, h3_tablette);
-
     }
     @include ordinateur-only{
         font-size:map-get($taille, h3_ordi);
     }
-
 }
-    
 @mixin bouton_recherche{
     background: linear-gradient(to bottom, $pink, $violet);
     text-align: center;
@@ -626,7 +639,6 @@
         margin: auto;
     }
     }
-
 @mixin bouton_recherche_hover {
     box-shadow: map-get($ombre, bouton_recherche_hover);
     filter: brightness(96%);
