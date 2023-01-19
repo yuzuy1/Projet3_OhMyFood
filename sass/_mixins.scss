@@ -629,6 +629,9 @@
     padding: map-get($margeinterne, bouton_recherche);
     font-family: Arial, Helvetica, sans-serif;
 
+    filter: brightness(96%);
+    box-shadow: 1px 5px 11px 1px #767676;
+
     border-radius: $radius;
     @include tablette-only{
         width: map-get($largeur, bouton_recherche_tablette);
@@ -641,9 +644,12 @@
     }
 @mixin bouton_recherche_hover {
     box-shadow: map-get($ombre, bouton_recherche_hover);
-    filter: brightness(96%);
-    box-shadow: 1px 5px 11px 1px #767676;
     border-radius: $radius;
+
+
+    filter: brightness(100%);
+    box-shadow: none;
+
 }
 @mixin fonctionnement {
     box-shadow: map-get($ombre, fonctionnement);
