@@ -1,202 +1,104 @@
-.page {
-    @include page;
-}
-html{
-     @include html;
-}
-.titre_footer > p{
-    @include titre_footer_p;
-}
-.ohmyfood{
-    @include haut_page;
-}
-.ohmyfood >h1 {
-    @include ohmyfood_h1;
+
+.page{
+    @include page_menu;
 }
 body{
     @include body;
 }
-.logo {
-    @include logo;
+/* haut de page*/
+.fa-sharp{
+    @include fa_sharp;
 }
-header{
-    @include header;
-}
-.barre_de_recherche {
-    @include barre_de_recherche;
-}
-#image_recherche {
-    @include image_recherche;
-}
-#destination {
-    @include destination;
-}
-.texte{
-    @include texte;
-}
-
-.texte_recherche1 {
-    @include texte_recherche1;
-}
-
-h1 {
-    @include h1;
-}
-
-.texte_recherche2 {
-    @include texte_recherche2;
-}
-
-h2 {
-    @include h2
-}
-
-.bouton_recherche {
-    @include bouton_recherche;
-}
-
-.bouton_recherche:hover {
-    @include bouton_recherche_hover;
-}
-
-h3 {
-    @include h3;
-}
-
-/*block fonctionnement*/
-.fonctionnement {
-    @include fonctionnement;
-}
-
-h4 {
-    @include h4;
-}
-
-h5 {
-    @include h5;
-}
-.image_menu{
-    @include image_menu;
-}
-#La_palette_du_goût,
-#La_note_enchantée,
-#À_la_française,
-#Le_délice_des_sens {
-    @include les_parties;
-}
-
-.partie1_fonctionnement,
-.partie2_fonctionnement,
-.partie3_fonctionnement {
-    @include partie_fonctionnement;
-}
-
-.partie1_fonctionnement:hover,
-.partie2_fonctionnement:hover,
-.partie3_fonctionnement:hover {
-    @include partie_fonctionnement_hover;
-}
-
-.chiffre {
-    @include chiffre;
-}
-
-#image_phone,
-#image_liste,
-#image_restaurant {
-    @include images_icones;
-}
-
-.restaurants {
-    @include restaurants;
-}
-
-h6 {
-    @include h6;
-}
-
-
-
 .fa-regular {
     @include fa_heart_hover;
 }
-.partie1_restaurants{
-    @include partie1;
+.fa-solid{
+    @include fa_solid_menu;
 }
-.partie2_restaurants{
-    @include partie2;
+.fa-arrow-left{
+    @include arow-left;
 }
-.partie3_restaurants{
-    @include partie3;
+.logo{
+    @include logo_menu;
+} 
+.logo >p{
+    @include logo_p;
 }
-.partie4_restaurants{
-    @include partie4;
+#restaurant_image{
+    @include restaurant_image_menu;
 }
-.nouveau1>p{
-    @include nouveau1_p;
-}
-.nouveau2>p{
-    @include nouveau2_p;
-}
-.nouveau1 {
-    @include nouveau1;
-}
-.nouveau2 {
-    @include nouveau2;
+.élement{
+    @include element_menu;
 }
 
-p {
-    @include p;
+h1{
+    @include h1_menu;
+}
+h2{
+    @include h2_menu;
 }
 
-img {
-    @include img;
+.block{
+    @include block_menu;
+}
+.description{
+    @include description_menu;
 }
 
-.description {
-    @include description;
+h3{
+    @include h3_menu;
+}
+h4{
+    @include h4_menu;
+}
+h5{
+    @include h5_menu;
+}
+.Commander > p{
+    @include p_menu;
+}
+.Commander{
+    @include commander_menu;
+}
+.haut_page{
+    @include haut_page;
+}
+i{
+    @include i_menu;
 }
 
 
-
-i {
-    @include i;
+.titre_partie1{
+    @include titre_partie_1;
 }
+.titres_parties{
+    @include titres;
+}
+ul{  
+    @include ul_menu;
+}
+
+li a{
+    @include a_menu;
+}
+
+.fa-heart{
+    @include fa_heart;
+}
+button{
+    @include button;
+}
+
 footer {
     @include footer;
 }
-
 .titre_footer{
     @include titre_footer;
 }
+
 #fourchette_couteau{
     @include valeurs_icone_footer ;
 }
 #icone_hande{
-    @include valeurs_icone_footer ;
-}
-
-
-ul {
-    @include valeurs_ul;
-}
-.ohmyfood >p 
-{
-    @include ohmyfood_p;
-}
-li a {
-    @include valeurs_li_a;
-}
-form{
-    @include form;
-}
-
-.a{
-    @include a}
-
-#partie1, #partie2, #partie3, #partie4{
-    text-decoration: none;
-    color:black;
-
-
+    @include valeurs_icone_footer_hand ;
 }
