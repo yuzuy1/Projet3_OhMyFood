@@ -278,7 +278,7 @@
         color: $blanc;
         box-shadow: map-get($ombre, box-shadow) $gris;
         font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         @include tablette-only {
             padding: map-get($margeinterne, p_menu_tablette);
             padding: map-get($margeinterne, p_menu_tablette);
