@@ -475,7 +475,7 @@ h5 {
   border-radius: 45px;
   font-size: 20px;
   padding: 1rem 0rem 1rem 0rem;
-  width: 12rem;
+  width: 160px;
   font-weight: bold;
   background: linear-gradient(to bottom, rgb(228, 120, 204), rgb(159, 91, 221));
   justify-content: center;
@@ -483,12 +483,14 @@ h5 {
   color: white;
   box-shadow: 0px 0px 7px 1px rgb(214, 214, 214);
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 6rem;
 }
 @media all and (min-width: 768px) {
   .Commander > p {
-    margin: 2rem 10rem 2rem 10rem;
-    padding: 2rem 10rem 2rem 10rem;
-    width: 50vw;
+    padding: 2rem 5rem 2rem 4rem;
+    padding: 2rem 5rem 2rem 4rem;
+    width: 6rem;
+    margin-bottom: 6rem;
   }
 }
 @media all and (min-width: 992px) {
@@ -497,6 +499,7 @@ h5 {
     font-size: 1.5rem;
     padding: 2rem 5rem 2rem 5rem;
     width: 28rem;
+    margin-bottom: 4rem;
   }
 }
 .Commander > p:hover {
