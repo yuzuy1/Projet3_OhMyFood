@@ -128,6 +128,7 @@ html {
   font-weight: bold;
   font-family: "Shrikhand";
   font-weight: bold;
+  font-style: italic;
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .titre_footer > p {
@@ -165,6 +166,7 @@ html {
   font-size: 1.5rem;
   margin: auto;
   position: relative;
+  font-style: italic;
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .ohmyfood > h1 {
@@ -604,6 +606,26 @@ h6 {
   }
 }
 
+#destination {
+  justify-content: center;
+  background-color: rgb(234, 234, 234);
+  font-size: 1rem;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #destination {
+    font-size: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  #destination {
+    font-size: 2rem;
+  }
+}
+
 .fa-regular {
   content: "\f004";
   top: 0rem;
@@ -629,7 +651,11 @@ h6 {
   }
 }
 .fa-regular:hover {
-  color: rgb(159, 91, 221);
+  background: linear-gradient(to bottom, rgb(159, 91, 221), rgb(223, 118, 200));
+  text-shadow: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 .partie1_restaurants {
@@ -889,25 +915,35 @@ footer {
   }
 }
 
+#fourchette_couteau {
+  margin-right: 1.2rem;
+}
 @media all and (min-width: 500px) and (max-width: 800px) {
   #fourchette_couteau {
     font-size: 1.5rem;
+    margin-right: 2rem;
   }
 }
 @media all and (min-width: 800px) {
   #fourchette_couteau {
     font-size: 1.5rem;
+    margin-right: 2rem;
   }
 }
 
+#icone_hande {
+  margin-right: 0.8rem;
+}
 @media all and (min-width: 500px) and (max-width: 800px) {
   #icone_hande {
     font-size: 1.5rem;
+    margin-right: 1.4rem;
   }
 }
 @media all and (min-width: 800px) {
   #icone_hande {
     font-size: 1.5rem;
+    margin-right: 1.4rem;
   }
 }
 
