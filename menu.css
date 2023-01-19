@@ -483,7 +483,9 @@ h5 {
   color: white;
   box-shadow: 0px 0px 7px 1px rgb(214, 214, 214);
   font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  filter: brightness(96%);
+  box-shadow: 0px 0px 7px 5px rgb(214, 214, 214);
 }
 @media all and (min-width: 768px) {
   .Commander > p {
@@ -503,9 +505,9 @@ h5 {
   }
 }
 .Commander > p:hover {
-  box-shadow: 0px 0px 7px 5px rgb(214, 214, 214);
   background: linear-gradient(to bottom, rgb(228, 120, 204), rgb(159, 91, 221));
-  filter: brightness(96%);
+  box-shadow: none;
+  filter: brightness(100%);
 }
 
 .Commander {
