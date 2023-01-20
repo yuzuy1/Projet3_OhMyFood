@@ -281,7 +281,7 @@ header {
   bottom: -1.5rem;
   text-align: initial;
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .texte {
@@ -290,7 +290,7 @@ header {
 }
 
 .texte_recherche1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 
 h1 {
@@ -313,7 +313,7 @@ h1 {
 .texte_recherche2 {
   margin: 30px 0px 0px 0px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .texte_recherche2 {
@@ -330,9 +330,8 @@ h2 {
   margin: 0px;
   text-align: center;
   font-size: 1rem;
-  font-family: "Arial";
   font-weight: lighter;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   h2 {
@@ -350,7 +349,7 @@ h2 {
   text-align: center;
   margin: 30px 19% 70px 19%;
   padding: 1px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   filter: brightness(96%);
   box-shadow: 1px 5px 11px 1px #767676;
   border-radius: 45px 45px 45px 45px;
@@ -379,8 +378,7 @@ h3 {
   text-transform: none;
   font-size: 1rem;
   color: #ffffff;
-  font-family: "Arial";
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   h3 {
@@ -427,7 +425,7 @@ h4 {
 
 h5 {
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   align-items: center;
   display: flex;
   position: relative;
@@ -466,7 +464,7 @@ h5 {
 #Le_délice_des_sens {
   text-decoration: none;
   color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 
 .partie1_fonctionnement,
@@ -478,7 +476,7 @@ h5 {
   background-color: rgb(247, 247, 247);
   border-radius: 45px 45px 45px 45px;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .partie1_fonctionnement,
@@ -522,7 +520,7 @@ h5 {
   margin: 25px 0px 25px 0px;
   color: #ffffff;
   right: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .chiffre {
@@ -570,7 +568,7 @@ h5 {
   background-color: rgb(247, 247, 247);
   padding: 1rem 2rem 1rem 2rem;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   .restaurants {
@@ -583,7 +581,7 @@ h5 {
     -moz-column-count: 2;
          column-count: 2;
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     padding: 0rem 6rem 0rem 6rem;
   }
 }
@@ -754,7 +752,7 @@ h6 {
   position: absolute;
   color: rgb(0, 135, 102);
   margin: 1rem 0rem 5rem 0rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   width: 6rem;
   float: right;
   height: 1.5rem;
@@ -771,7 +769,7 @@ h6 {
     background-color: rgb(153, 226, 208);
     position: absolute;
     color: rgb(0, 135, 102);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     float: right;
     height: 3rem;
     top: 85rem;
@@ -787,7 +785,7 @@ h6 {
     position: relative;
     color: rgb(0, 135, 102);
     margin: 1rem 0rem 5rem 0rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     float: right;
     height: 2rem;
   }
@@ -799,7 +797,7 @@ h6 {
   position: relative;
   color: rgb(0, 135, 102);
   margin: 1rem 0rem 5rem 0rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   width: 6rem;
   float: right;
   height: 1.5rem;
@@ -816,7 +814,7 @@ h6 {
     background-color: rgb(153, 226, 208);
     color: rgb(0, 135, 102);
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     float: right;
     height: 3rem;
   }
@@ -830,7 +828,7 @@ h6 {
     position: relative;
     color: rgb(0, 135, 102);
     margin: 1rem 0rem 5rem 0rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     float: right;
     height: 2rem;
     bottom: 1.5rem;
@@ -841,7 +839,7 @@ p {
   position: relative;
   left: 2rem;
   text-align: initial;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto';
   margin: 0rem 0rem 0rem 0rem;
   font-size: 1rem;
   position: relative;
@@ -873,7 +871,7 @@ img {
   border-radius: 25px 25px 25px 25px;
   background-color: white;
   text-align: end;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto';
   overflow: hidden;
 }
 .description:hover {
@@ -893,7 +891,7 @@ footer {
 @media all and (min-width: 800px) {
   footer {
     height: 25rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     top: 0rem;
     position: relative;
   }
@@ -955,7 +953,7 @@ ul {
   height: 100px;
   list-style-type: none;
   top: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto';
   margin: 2rem 0rem 2rem 0rem;
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
@@ -963,7 +961,7 @@ ul {
     position: relative;
     top: 0rem;
     height: 10rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     padding: 2rem 2rem 2rem 2.5rem;
   }
 }
@@ -974,7 +972,7 @@ ul {
     display: grid;
     justify-content: space-between;
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     top: 0rem;
     padding: 2rem 2rem 2rem 4rem;
     font-size: 1.5rem;
@@ -1004,7 +1002,7 @@ li a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto';
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
   li a {
