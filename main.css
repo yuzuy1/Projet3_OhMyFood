@@ -467,6 +467,10 @@ h5 {
   font-family: 'Roboto';
 }
 
+#contact{
+  font-style: italic;
+}
+
 .partie1_fonctionnement,
 .partie2_fonctionnement,
 .partie3_fonctionnement {
