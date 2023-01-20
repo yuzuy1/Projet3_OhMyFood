@@ -129,11 +129,11 @@
     filter: invert(1);
     margin: map-get($MargeExterne, titre_footer_mobile_img);
     border-radius: $no-radius;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
         padding: map-get($margeinterne, titre_footer_tablette_img);
         position: relative;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         margin: map-get($MargeExterne, titre_footer_tablette);
         filter: invert(1); 
         height: map-get($hauteur, titre_footer_tablette);
@@ -147,7 +147,7 @@
     height:map-get($hauteur, titre_footer_ordi_img);
     width:map-get($largeur, titre_footer_ordi_img);
     position: relative; 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     top: map-get($top, footer_ordi);
     padding: map-get($margeinterne, titre_footer_ordi_img);
     }
@@ -160,7 +160,7 @@
         height: map-get($hauteur, footer_tablette);    }
     @include ordinateur-only {
         height: map-get($hauteur, footer_ordi); 
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         top: map-get($top, footer_ordi);
         position: relative;
     }
@@ -174,14 +174,14 @@
     height: map-get($hauteur, ul_mobile);
     list-style-type: none;
     top: map-get($top, ul);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     margin: map-get($MargeExterne, valeurs_ul);
     padding: map-get($margeinterne, mobile_ul);
     @include tablette-only{
         position: relative;
         top: map-get($top, ul_tablette);
         height: map-get($hauteur, ul_tablette);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         padding: map-get($margeinterne, valeur_tablette_ul);
     }
     @include ordinateur-only{
@@ -190,7 +190,7 @@
         display: grid;
         justify-content: space-between;
         list-style-type: none;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         top: map-get($top, valeur_ordi_ul);
         padding: map-get($margeinterne, valeur_ordi_ul);
         font-size: map-get($taille, ul_ordi);
@@ -199,7 +199,7 @@
     text-decoration: none;
     color: white;
     font-size:map-get($taille, valeur_li_a);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
         font-size:map-get($taille, valeur_li_a_tablette);
     }
@@ -218,7 +218,7 @@
     bottom: map-get($bottom, texte_mobile);
     text-align: initial;
     font-size: map-get($taille, texte);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only {
         bottom: map-get($bottom, texte_tablette);
     }
@@ -231,7 +231,7 @@
     border-radius: map-get($bordure, bordure_mobile);
     background-color: white;
     text-align: end;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     overflow: hidden;
 
 
@@ -265,7 +265,7 @@
     position: relative;
     left: map-get($left, p); 
     text-align: initial;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     margin:map-get($MargeExterne, p);
     font-size: 1rem;
     position: relative;
@@ -311,7 +311,7 @@
     position: absolute;
     color: $vert;
     margin: map-get($MargeExterne, nouveau);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     width: map-get($largeur, nouveau1_mobile);
     float: right;
     height: map-get($hauteur, nouveau1_mobile);
@@ -328,7 +328,7 @@
         position: absolute;
         color: $vert;
         margin: map-get($MargeExterne, nouveau1_tablette);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         float: right;
         height: map-get($hauteur, nouveau1_tablette);
         top: map-get($top, nouveau1_tablette);
@@ -342,7 +342,7 @@
         position: relative;
         color: $vert;
         margin: map-get($MargeExterne, nouveau);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         float: right;
         height: map-get($hauteur, nouveau1_ordi);
     }
@@ -353,7 +353,7 @@
     position: relative;
     color: $vert;
     margin: map-get($MargeExterne, nouveau);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     width: map-get($largeur, nouveau2_mobile);
     float: right;
     height:  map-get($hauteur, nouveau2_mobile);
@@ -369,7 +369,7 @@
         color:$vert;
         position: absolute;
         margin:  map-get($MargeExterne, nouveau2_tablette);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         float: right;
         height:  map-get($hauteur, nouveau2_tablette);}
     @include ordinateur-only{
@@ -380,7 +380,7 @@
         position: relative;
         color: $vert;
         margin: map-get($MargeExterne, nouveau);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         float: right;
         height:  map-get($hauteur, nouveau2_ordi);
         bottom: map-get($bottom, nouveau2_ordi);
@@ -407,7 +407,7 @@
     background-color: $gris;
     padding: map-get($margeinterne, restaurants_mobile);
     margin: map-get($MargeExterne, restaurant);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
     padding: map-get($margeinterne, restaurants_tablette);
     }
@@ -415,7 +415,7 @@
         background-color: $gris;
         column-count: 2;
         position: relative;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         padding:map-get($margeinterne, restaurants_ordi);
     }
 }
@@ -511,7 +511,7 @@
     color: $white;
     right: map-get($right, chiffre_mobile);
     font-size: map-get($taille, mobile_ordi);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
         padding:  map-get($margeinterne, chiffre_tablette);
         margin: map-get($MargeExterne, chiffre_tablette);
@@ -558,7 +558,7 @@
     background-color: map-get($fond-color, partie_fonctionnement);
     border-radius: $radius;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
     height:  map-get($hauteur, partie_fonctionnement_tablette);
     font-size:  map-get($taille, partie_fonctionnement_tablette);
@@ -573,12 +573,12 @@
 @mixin les_parties {
     text-decoration: none;
     color: $black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 }
 
 @mixin h5 {
     font-size:  map-get($taille, h5_mobile);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     align-items: center;
     display: flex;
     position: relative;
@@ -607,14 +607,14 @@
 @mixin fonctionnement {
     text-decoration: none;
     color: $black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 }
 @mixin h3 {
     text-transform: none;
     font-size: map-get($taille, h3_mobile);
     color: $white;
     font-family: map-get($police, h3);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     @include tablette-only{
         font-size:map-get($taille, h3_tablette);
     }
@@ -627,7 +627,7 @@
     text-align: center;
     margin: map-get($MargeExterne, bouton_recherche);
     padding: map-get($margeinterne, bouton_recherche);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 
     filter: brightness(96%);
     box-shadow: 1px 5px 11px 1px #767676;
@@ -666,9 +666,8 @@
     margin: map-get($MargeExterne, h2);
     text-align: center;
     font-size: map-get($taille, h2_mobile);
-    font-family: map-get($police, h2);
+    font-family: 'Roboto';
     font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
     @include tablette-only{
         font-size: map-get($taille, h2_tablette);
     }
@@ -680,7 +679,7 @@
 @mixin texte_recherche2 {
     margin: map-get($MargeExterne,texte_recherche2);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto';
     @include tablette-only{
     margin: map-get($MargeExterne,texte_recherche2_tablette);
     }
@@ -705,7 +704,7 @@
 @mixin texte_recherche1 {
     width: map-get($largeur, texte-recherche1);
     margin: map-get($MargeExterne, texte-recherche1);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 }
 @mixin form{
     align-items: center;
