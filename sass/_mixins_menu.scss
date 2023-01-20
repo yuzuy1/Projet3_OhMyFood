@@ -98,7 +98,7 @@
 @mixin element_menu {
     background-color: $blanc-sombre;
     border-radius: map-get($anglebord, element);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     position: relative;
     bottom: map-get($bottom, element);
 }
@@ -106,7 +106,7 @@
     @mixin titres_parties {
         padding: map-get($margeinterne, titres_parties);
         border-bottom: map-get($bordure_bas, titres_parties);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         height: map-get($hauteur, titres_parties);
     }
 
@@ -152,7 +152,7 @@
         border: none;
         border-radius: map-get($anglebord, button);
         padding: map-get($margeinterne, button);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
     }
 
     @mixin fa_heart {
@@ -182,7 +182,7 @@
         width: map-get($largeur, titres);
         left: map-get($left, titres_mobile);
         position: relative;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         @include tablette-only{
         left: map-get($left, titres_tablette);
         }
@@ -206,7 +206,7 @@
         text-overflow: ellipsis;
         /*troix points*/
 
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
 
         @include tablette-only {
             margin: map-get($margeexterne, h3_menu_tablette);
@@ -227,7 +227,7 @@
         font-size: map-get($taille, h4_menu_mobile);
         margin: map-get($margeexterne, h4_menu_mobile);
         font-weight: normal;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         width: 76%;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -249,7 +249,7 @@
     @mixin h5_menu {
         font-size: map-get($taille, h5_mobile);
         font-weight: normal;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Roboto';
         align-items: end;
         display: flex;
         width: map-get($largeur, h5_mobile);
@@ -277,7 +277,7 @@
         text-align: center;
         color: $blanc;
         box-shadow: map-get($ombre, box-shadow) $gris;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         margin-bottom: 6rem;
 
         filter: brightness(96%);
@@ -349,7 +349,7 @@
         height: map-get($hauteur, ul_mobile);
         list-style-type: none;
         padding: map-get($margeinterne, mobile_ul);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Roboto';
         position: relative;
         left: map-get($left, ul_mobile);
         width: map-get($largeur, ul);
@@ -374,7 +374,7 @@
         text-decoration: none;
         color: $blanc;
         font-size: map-get($taille, a_menu_mobile);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Roboto';
 
         @include tablette-only {
             font-size: map-get($taille, a_menu_tablette);
@@ -466,7 +466,7 @@
             display: flex;
             justify-content: space-between;
             box-shadow: map-get($ombre, block_menu-hover);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto';
             border-radius:map-get($anglebord,block_mobile);
             height: map-get($hauteur, block_mobile);
             align-items: center;
@@ -622,7 +622,7 @@
     @include ordinateur-only {
         position: relative;
         height: map-get($hauteur, footer_ordi); 
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto';
         top: map-get($top, footer_ordi);
     }
 }
