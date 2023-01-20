@@ -262,7 +262,7 @@ body {
 .élement {
   background-color: rgb(247, 247, 247);
   border-radius: 45px 45px 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: '
   position: relative;
   bottom: 3rem;
 }
@@ -315,7 +315,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 0px 15px 2px rgb(231, 231, 231);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   border-radius: 20px;
   height: 21vw;
   align-items: center;
@@ -405,7 +405,7 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   /*troix points*/
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 768px) {
   h3 {
@@ -428,7 +428,7 @@ h4 {
   font-size: 12px;
   margin: 0px 0px 0px 2rem;
   font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   width: 76%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -451,7 +451,7 @@ h4 {
 h5 {
   font-size: 14px;
   font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   align-items: end;
   display: flex;
   width: 3rem;
@@ -482,7 +482,7 @@ h5 {
   text-align: center;
   color: white;
   box-shadow: 0px 0px 7px 1px rgb(214, 214, 214);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   margin-bottom: 6rem;
   filter: brightness(96%);
   box-shadow: 0px 0px 7px 5px rgb(214, 214, 214);
@@ -561,7 +561,7 @@ i {
   width: 4rem;
   left: 1.5rem;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 768px) {
   .titres_parties {
@@ -580,7 +580,7 @@ ul {
   height: 7rem;
   list-style-type: none;
   padding: 0rem 0rem 0rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   position: relative;
   left: 1.5rem;
   width: 70%;
@@ -605,7 +605,7 @@ li a {
   text-decoration: none;
   color: white;
   font-size: 5vw;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 @media all and (min-width: 768px) {
   li a {
@@ -648,7 +648,7 @@ button {
   border: none;
   border-radius: 45px 45px 0px 0px;
   padding: 0rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 
 footer {
@@ -660,7 +660,7 @@ footer {
   footer {
     position: relative;
     height: 25rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     top: 3rem;
   }
 }
@@ -721,4 +721,4 @@ footer {
     font-size: 2rem;
     margin-right: 1.4rem;
   }
-}/*# sourceMappingURL=menu.css.map */
+}
